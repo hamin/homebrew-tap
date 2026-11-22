@@ -33,7 +33,7 @@ class Lotel < Formula
     prefix.install "LICENSE", "NOTICE", "THIRD-PARTY-LICENSES", "licenses"
   end
 
-  # brew services start lotel: data under /var/lotel
+  # brew services start lotel: data in var/lotel under the Homebrew prefix
   service do
     run [opt_bin/"lotel"]
     environment_variables LOTEL_DATA_DIR: var/"lotel"
